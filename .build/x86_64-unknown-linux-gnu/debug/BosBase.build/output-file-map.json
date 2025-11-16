@@ -1,0 +1,215 @@
+{
+  "": {
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/master.swiftdeps"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/AuthStore.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AuthStore.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AuthStore.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AuthStore~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AuthStore.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AuthStore.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/BosBaseClient.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BosBaseClient.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BosBaseClient.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BosBaseClient~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BosBaseClient.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BosBaseClient.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/ClientResponseError.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ClientResponseError.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ClientResponseError.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ClientResponseError~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ClientResponseError.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ClientResponseError.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/EmptyResponse.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/EmptyResponse.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/EmptyResponse.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/EmptyResponse~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/EmptyResponse.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/EmptyResponse.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/LLMModels.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMModels.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMModels.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMModels~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMModels.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMModels.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/LangChaingoModels.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoModels.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoModels.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoModels~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoModels.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoModels.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/ListResult.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ListResult.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ListResult.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ListResult~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ListResult.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ListResult.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/RecordAuthResponse.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/VectorModels.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BackupService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BackupService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BackupService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BackupService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BackupService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BackupService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BaseService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BaseService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BaseService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BaseService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BaseService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BaseService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BatchService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BatchService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BatchService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BatchService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BatchService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BatchService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/CacheService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CacheService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CacheService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CacheService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CacheService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CacheService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/CollectionService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CollectionService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CollectionService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CollectionService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CollectionService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CollectionService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/CronService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CronService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CronService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CronService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CronService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CronService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/FileService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/FileService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/FileService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/FileService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/FileService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/FileService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/HealthService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/HealthService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/HealthService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/HealthService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/HealthService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/HealthService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LLMDocumentService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMDocumentService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMDocumentService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMDocumentService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMDocumentService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMDocumentService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LangChaingoService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LogService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/VectorService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/AnyCodable.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyCodable.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyCodable.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyCodable~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyCodable.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyCodable.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/AnyEncodable.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyEncodable.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyEncodable.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyEncodable~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyEncodable.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyEncodable.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/MultipartFormData.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/MultipartFormData.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/MultipartFormData.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/MultipartFormData~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/MultipartFormData.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/MultipartFormData.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/PathEncoder.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PathEncoder.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PathEncoder.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PathEncoder~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PathEncoder.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PathEncoder.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/QueryEncoder.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/QueryEncoder.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/QueryEncoder.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/QueryEncoder~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/QueryEncoder.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/QueryEncoder.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/RequestOptions.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RequestOptions.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RequestOptions.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RequestOptions~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RequestOptions.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RequestOptions.dia"
+  }
+}

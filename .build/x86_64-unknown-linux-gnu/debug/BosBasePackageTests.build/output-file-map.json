@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBasePackageTests.build/master.swiftdeps"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBasePackageTests.derived/runner.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBasePackageTests.build/runner.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBasePackageTests.build/runner.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBasePackageTests.build/runner~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBasePackageTests.build/runner.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBasePackageTests.build/runner.dia"
+  }
+}

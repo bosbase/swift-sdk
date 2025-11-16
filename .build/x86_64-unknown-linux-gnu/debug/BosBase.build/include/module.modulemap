@@ -1,0 +1,3 @@
+module BosBase {
+    header "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/include/BosBase-Swift.h"
+}
