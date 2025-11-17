@@ -88,6 +88,62 @@ client.afterSend = { response, data in
 }
 ```
 
+## Documentation
+
+Comprehensive documentation is available in the [`docs/`](./docs/) directory. The documentation mirrors the JavaScript SDK structure and provides Swift-specific examples:
+
+### Core Documentation
+
+- **[Authentication](./docs/AUTHENTICATION.md)** - Password, OTP, OAuth2, MFA, impersonation, and token management
+- **[Collections](./docs/COLLECTIONS.md)** - Collection and record management, CRUD operations, field management
+- **[API Rules and Filters](./docs/API_RULES_AND_FILTERS.md)** - API rules, filter syntax, special identifiers, and security
+- **[Relations](./docs/RELATIONS.md)** - Relation fields, expand, back-relations, and nested relations
+- **[Files](./docs/FILES.md)** - File upload, thumbnails, protected files, and file management
+- **[Realtime](./docs/REALTIME.md)** - Real-time subscriptions, SSE connections, and event handling
+- **[Vector API](./docs/VECTOR_API.md)** - Vector database operations, semantic search, and RAG applications
+
+### Quick Links
+
+- **Getting Started**: See the [Quick Start](#quick-start) section above
+- **JavaScript SDK Reference**: The Swift SDK API mirrors the [JavaScript SDK](../js-sdk/README.md) - refer to JS docs for API details
+- **Examples**: Each documentation file includes complete Swift code examples
+
+### Example: Complete Authentication Flow
+
+```swift
+import BosBase
+
+let client = try BosBaseClient(baseURLString: "http://localhost:8090")
+
+// Authenticate
+do {
+    let auth = try await client
+        .collection("users")
+        .authWithPassword(identity: "user@example.com", password: "password123")
+    
+    print("Authenticated: \(auth.record?["email"] ?? "")")
+    
+    // Fetch data
+    let posts: ListResult<JSONRecord> = try await client
+        .collection("posts")
+        .getList(page: 1, perPage: 10)
+    
+    // Subscribe to realtime updates
+    let unsubscribe = try await client
+        .collection("posts")
+        .subscribe("*") { event in
+            print("Post \(event.action ?? ""): \(event.record)")
+        }
+    
+    // Later, cleanup
+    await unsubscribe()
+    client.authStore.clear()
+    
+} catch let error as ClientResponseError {
+    print("Error: \(error.status) - \(error.response ?? [:])")
+}
+```
+
 ## Testing
 
 `swift test` runs the lightweight unit tests covering the filter builder, `AuthStore`, and URL builder logic.
