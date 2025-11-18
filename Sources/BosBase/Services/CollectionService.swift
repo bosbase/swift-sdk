@@ -207,4 +207,20 @@ public final class CollectionService: BaseService {
             return result
         }
     }
+
+    public func getSchema(
+        _ collectionIdOrName: String,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> JSONRecord {
+        let path = basePath + "/" + encodePathSegment(collectionIdOrName) + "/schema"
+        return try await client.send(path, options: RequestOptions(headers: headers, query: query), decodeTo: JSONRecord.self)
+    }
+
+    public func getAllSchemas(
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> JSONRecord {
+        return try await client.send(basePath + "/schemas", options: RequestOptions(headers: headers, query: query), decodeTo: JSONRecord.self)
+    }
 }
