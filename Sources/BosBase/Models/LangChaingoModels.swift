@@ -137,3 +137,97 @@ public struct LangChaingoRAGResponse: Codable {
     public var answer: String?
     public var sources: [LangChaingoSourceDocument]?
 }
+
+public struct LangChaingoDocumentQueryRequest: Codable {
+    public var model: LangChaingoModelConfig?
+    public var collection: String
+    public var query: String
+    public var topK: Int?
+    public var scoreThreshold: Double?
+    public var filters: LangChaingoRAGFilters?
+    public var promptTemplate: String?
+    public var returnSources: Bool?
+
+    public init(
+        model: LangChaingoModelConfig? = nil,
+        collection: String,
+        query: String,
+        topK: Int? = nil,
+        scoreThreshold: Double? = nil,
+        filters: LangChaingoRAGFilters? = nil,
+        promptTemplate: String? = nil,
+        returnSources: Bool? = nil
+    ) {
+        self.model = model
+        self.collection = collection
+        self.query = query
+        self.topK = topK
+        self.scoreThreshold = scoreThreshold
+        self.filters = filters
+        self.promptTemplate = promptTemplate
+        self.returnSources = returnSources
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case model
+        case collection
+        case query
+        case topK
+        case scoreThreshold
+        case filters
+        case promptTemplate
+        case returnSources
+    }
+}
+
+// DocumentQueryResponse is the same as RAGResponse
+public typealias LangChaingoDocumentQueryResponse = LangChaingoRAGResponse
+
+public struct LangChaingoSQLRequest: Codable {
+    public var model: LangChaingoModelConfig?
+    public var query: String
+    public var tables: [String]?
+    public var topK: Int?
+
+    public init(
+        model: LangChaingoModelConfig? = nil,
+        query: String,
+        tables: [String]? = nil,
+        topK: Int? = nil
+    ) {
+        self.model = model
+        self.query = query
+        self.tables = tables
+        self.topK = topK
+    }
+}
+
+public struct LangChaingoSQLResponse: Codable {
+    public var sql: String
+    public var answer: String
+    public var columns: [String]?
+    public var rows: [[String]]?
+    public var rawResult: String?
+
+    public init(
+        sql: String,
+        answer: String,
+        columns: [String]? = nil,
+        rows: [[String]]? = nil,
+        rawResult: String? = nil
+    ) {
+        self.sql = sql
+        self.answer = answer
+        self.columns = columns
+        self.rows = rows
+        self.rawResult = rawResult
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case sql
+        case answer
+        case columns
+        case rows
+        case rawResult
+    }
+}

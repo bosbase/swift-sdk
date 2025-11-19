@@ -26,4 +26,28 @@ public final class LangChaingoService: BaseService {
             decodeTo: LangChaingoRAGResponse.self
         )
     }
+
+    public func queryDocuments(
+        _ payload: LangChaingoDocumentQueryRequest,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> LangChaingoDocumentQueryResponse {
+        return try await client.send(
+            basePath + "/documents/query",
+            options: RequestOptions(method: .post, headers: headers, query: query, body: .encodable(payload)),
+            decodeTo: LangChaingoDocumentQueryResponse.self
+        )
+    }
+
+    public func sql(
+        _ payload: LangChaingoSQLRequest,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> LangChaingoSQLResponse {
+        return try await client.send(
+            basePath + "/sql",
+            options: RequestOptions(method: .post, headers: headers, query: query, body: .encodable(payload)),
+            decodeTo: LangChaingoSQLResponse.self
+        )
+    }
 }
