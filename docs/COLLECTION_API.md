@@ -255,6 +255,35 @@ if var fields = collection["fields"]?.value as? [JSONRecord] {
 }
 ```
 
+## Manage Indexes
+
+BosBase keeps collection indexes as SQL snippets stored on the `indexes` array. The Swift SDK exposes helpers so you can generate those statements without manually editing the collection JSON.
+
+```swift
+// Create a unique slug index with a custom name
+_ = try await client.collections.addIndex(
+    "posts",
+    columns: ["slug"],
+    unique: true,
+    indexName: "idx_posts_slug_unique"
+)
+
+// Composite non-unique index (name auto-generates to idx_{collection}_{columns})
+_ = try await client.collections.addIndex("posts", columns: ["status", "published"])
+
+// Remove any index that targets the slug column
+_ = try await client.collections.removeIndex("posts", columns: ["slug"])
+
+// Inspect current indexes
+let indexes = try await client.collections.getIndexes("posts")
+indexes.forEach { print($0) }
+```
+
+- `columns` must reference existing fields (system columns like `id` are also allowed).
+- Set `unique` to `true` to generate `CREATE UNIQUE INDEX`.
+- Pass `indexName` to control the SQL name; otherwise the SDK uses `idx_{collection}_{column1}_{column2}`.
+- `removeIndex` drops indexes that contain every column you pass, so it works for both single and composite indexes.
+
 ## Delete Collection
 
 Delete a collection (including all records and files):
@@ -445,4 +474,3 @@ do {
 - [Collections Guide](./COLLECTIONS.md) - Working with collections and records
 - [API Records](./API_RECORDS.md) - Record CRUD operations
 - [API Rules and Filters](./API_RULES_AND_FILTERS.md) - Understanding API rules
-

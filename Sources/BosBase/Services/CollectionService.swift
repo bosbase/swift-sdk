@@ -223,4 +223,127 @@ public final class CollectionService: BaseService {
     ) async throws -> JSONRecord {
         return try await client.send(basePath + "/schemas", options: RequestOptions(headers: headers, query: query), decodeTo: JSONRecord.self)
     }
+
+    // MARK: - Index helpers
+
+    @discardableResult
+    public func addIndex(
+        _ collectionIdOrName: String,
+        columns: [String],
+        unique: Bool = false,
+        indexName: String? = nil,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> JSONRecord {
+        guard !columns.isEmpty else {
+            throw validationError("At least one column must be specified")
+        }
+
+        var collection: JSONRecord = try await getOne(collectionIdOrName, query: query, headers: headers)
+        let rawFields = collection["fields"]?.value as? [Any] ?? []
+        let fieldNames = rawFields.compactMap { field -> String? in
+            if let dict = field as? [String: Any] {
+                return dict["name"] as? String
+            }
+            return nil
+        }
+
+        for column in columns {
+            if column != "id" && !fieldNames.contains(column) {
+                throw validationError("Field \"\(column)\" does not exist in the collection")
+            }
+        }
+
+        let collectionName = (collection["name"]?.value as? String) ?? collectionIdOrName
+        let idxName = indexName ?? "idx_\(collectionName)_\(columns.joined(separator: "_"))"
+        let columnsStr = columns.map { "`\($0)`" }.joined(separator: ", ")
+        let indexDefinition = unique
+            ? "CREATE UNIQUE INDEX `\(idxName)` ON `\(collectionName)` (\(columnsStr))"
+            : "CREATE INDEX `\(idxName)` ON `\(collectionName)` (\(columnsStr))"
+
+        var indexes = extractStringArray(from: collection["indexes"])
+        if indexes.contains(indexDefinition) {
+            throw validationError("Index already exists")
+        }
+        indexes.append(indexDefinition)
+        collection["indexes"] = AnyCodable(indexes)
+
+        return try await update(
+            collectionIdOrName,
+            body: .encodable(collection),
+            query: query,
+            headers: headers
+        )
+    }
+
+    @discardableResult
+    public func removeIndex(
+        _ collectionIdOrName: String,
+        columns: [String],
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> JSONRecord {
+        guard !columns.isEmpty else {
+            throw validationError("At least one column must be specified")
+        }
+
+        var collection: JSONRecord = try await getOne(collectionIdOrName, query: query, headers: headers)
+        var indexes = extractStringArray(from: collection["indexes"])
+        let initialCount = indexes.count
+
+        indexes.removeAll { idx in
+            columns.allSatisfy { column in
+                let backticked = "`\(column)`"
+                return idx.contains(backticked)
+                    || idx.contains("(\(column))")
+                    || idx.contains("(\(column),")
+                    || idx.contains(", \(column))")
+            }
+        }
+
+        if indexes.count == initialCount {
+            throw validationError("Index not found")
+        }
+
+        collection["indexes"] = AnyCodable(indexes)
+        return try await update(
+            collectionIdOrName,
+            body: .encodable(collection),
+            query: query,
+            headers: headers
+        )
+    }
+
+    public func getIndexes(
+        _ collectionIdOrName: String,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> [String] {
+        let collection: JSONRecord = try await getOne(collectionIdOrName, query: query, headers: headers)
+        return extractStringArray(from: collection["indexes"])
+    }
+
+    private func validationError(_ message: String) -> ClientResponseError {
+        return ClientResponseError(
+            url: nil,
+            status: 400,
+            response: [
+                "code": AnyCodable(400),
+                "message": AnyCodable(message),
+                "data": AnyCodable([String: AnyCodable]())
+            ]
+        )
+    }
+
+    private func extractStringArray(from value: AnyCodable?) -> [String] {
+        guard let rawArray = value?.value as? [Any] else {
+            return []
+        }
+        return rawArray.compactMap { element in
+            if let string = element as? String {
+                return string
+            }
+            return nil
+        }
+    }
 }
