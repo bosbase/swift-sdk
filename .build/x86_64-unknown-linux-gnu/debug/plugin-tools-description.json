@@ -92,6 +92,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/GraphQLService.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/HealthService.swift"
         },
         {
@@ -175,6 +179,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CollectionService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/CronService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/FileService.swift.o",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/GraphQLService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/HealthService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMDocumentService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoService.swift.o",
@@ -292,6 +297,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/GraphQLService.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/HealthService.swift.o"
         },
         {
@@ -369,6 +378,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/CollectionService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/CronService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/FileService.swift",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/GraphQLService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/HealthService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LLMDocumentService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LangChaingoService.swift",
@@ -668,6 +678,7 @@
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/CollectionService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/CronService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/FileService.swift",
+      "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/GraphQLService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/HealthService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LLMDocumentService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LangChaingoService.swift",
@@ -987,6 +998,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/GraphQLService.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/HealthService.swift"
         },
         {
@@ -1138,6 +1153,10 @@
         {
           "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/FileService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/GraphQLService.swift.o"
         },
         {
           "kind" : "file",
