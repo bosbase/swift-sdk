@@ -27,6 +27,7 @@ public final class BosBaseClient: @unchecked Sendable {
     public lazy var langchaingo = LangChaingoService(client: self)
     public lazy var caches = CacheService(client: self)
     public lazy var graphql = GraphQLService(client: self)
+    public lazy var pubsub = PubSubService(client: self)
 
     let session: URLSession
     private let jsonDecoder: JSONDecoder

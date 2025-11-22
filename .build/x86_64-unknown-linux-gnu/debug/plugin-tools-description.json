@@ -112,6 +112,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift"
         },
         {
@@ -184,6 +188,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LLMDocumentService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService.swift.o",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PubSubService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.swift.o",
@@ -317,6 +322,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PubSubService.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService.swift.o"
         },
         {
@@ -383,6 +392,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LLMDocumentService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LangChaingoService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LogService.swift",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift",
@@ -683,6 +693,7 @@
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LLMDocumentService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LangChaingoService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LogService.swift",
+      "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift",
@@ -1018,6 +1029,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift"
         },
         {
@@ -1193,6 +1208,10 @@
         {
           "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PathEncoder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PubSubService.swift.o"
         },
         {
           "kind" : "file",

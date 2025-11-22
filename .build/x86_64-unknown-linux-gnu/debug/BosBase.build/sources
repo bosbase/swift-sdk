@@ -19,6 +19,7 @@
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LLMDocumentService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LangChaingoService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/LogService.swift
+/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift
