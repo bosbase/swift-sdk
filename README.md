@@ -54,8 +54,9 @@ let created: JSONRecord = try await client
 - ✅ Shared `AuthStore` that keeps the auth token + record in memory
 - ✅ Record CRUD helpers (`getList`, `getFullList`, `getOne`, `create`, `update`, `delete`, `getCount`)
 - ✅ Record authentication helpers including OAuth2 popup/code, OTP, password reset/verification/email change (`authWithPassword`, `authRefresh`, `authWithOTP`, `authWithOAuth2`, `authWithOAuth2Code`, `requestOTP`, `requestPasswordReset`, `confirmPasswordReset`, `requestVerification`, `confirmVerification`, `requestEmailChange`, `confirmEmailChange`, `impersonate`, `listAuthMethods`)
-- ✅ Collection management helpers (`createBase`, `createAuth`, `createView`, `getScaffolds`, `importCollections`, `truncate`)
+- ✅ Collection management helpers (`createBase`, `createAuth`, `createView`, `getScaffolds`, `getSchema`, `getAllSchemas`, `registerSQLTables`, `importSQLTables`, `importCollections`, `truncate`)
 - ✅ Vector, LLM Document, LangChaingo, Cache, Settings, Logs, Health, Cron, and Backup services mirroring the Go/JS APIs
+- ✅ Superuser SQL executor for ad-hoc queries via `client.sql.execute()`
 - ✅ Batch operations (with file/FormData support via `createBatch()`) and realtime subscriptions powered by the BosBase SSE endpoint
 - ✅ File helpers for creating protected URLs and issuing download tokens
 - ✅ Filter builder compatible with the JS SDK placeholder syntax
@@ -96,11 +97,13 @@ Comprehensive documentation is available in the [`docs/`](./docs/) directory. Th
 
 - **[Authentication](./docs/AUTHENTICATION.md)** - Password, OTP, OAuth2, MFA, impersonation, and token management
 - **[Collections](./docs/COLLECTIONS.md)** - Collection and record management, CRUD operations, field management
+- **[Schema Query API](./docs/SCHEMA_QUERY_API.md)** - Lightweight endpoints for fetching collection schemas
 - **[API Rules and Filters](./docs/API_RULES_AND_FILTERS.md)** - API rules, filter syntax, special identifiers, and security
 - **[Relations](./docs/RELATIONS.md)** - Relation fields, expand, back-relations, and nested relations
 - **[Files](./docs/FILES.md)** - File upload, thumbnails, protected files, and file management
 - **[Realtime](./docs/REALTIME.md)** - Real-time subscriptions, SSE connections, and event handling
 - **[Vector API](./docs/VECTOR_API.md)** - Vector database operations, semantic search, and RAG applications
+- **[SQL API](./docs/SQL_API.md)** - SQL execution plus SQL table registration/import helpers
 
 ### Quick Links
 

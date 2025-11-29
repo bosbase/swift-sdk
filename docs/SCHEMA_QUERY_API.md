@@ -35,13 +35,13 @@ import BosBase
 let client = try BosBaseClient(baseURLString: "http://127.0.0.1:8090")
 
 // Get schema for a specific collection
-let schema: JSONRecord = try await client.collections.getOne("posts")
-if let fields = schema["schema"]?.value as? [JSONRecord] {
+let schema: JSONRecord = try await client.collections.getSchema("posts")
+if let fields = schema["fields"]?.value as? [JSONRecord] {
     for field in fields {
-        if let name = field["name"]?.value as? String,
-           let type = field["type"]?.value as? String {
-            print("\(name): \(type)")
-        }
+        let name = field["name"]?.value as? String ?? ""
+        let type = field["type"]?.value as? String ?? ""
+        let required = field["required"]?.value as? Bool ?? false
+        print("\(name): \(type) (required: \(required))")
     }
 }
 ```
@@ -53,19 +53,17 @@ if let fields = schema["schema"]?.value as? [JSONRecord] {
     "id": "field-id",
     "name": "field-name",
     "type": "field-type",
-    "required": true/false,
-    "presentable": true/false,
-    "unique": true/false,
-    "system": true/false,
-    "options": { /* type-specific options */ }
+    "required": true,
+    "system": false,
+    "hidden": false
 }
 ```
 
 **Example:**
 ```swift
-let collection: JSONRecord = try await client.collections.getOne("posts")
+let schema: JSONRecord = try await client.collections.getSchema("posts")
 
-if let fields = collection["schema"]?.value as? [JSONRecord] {
+if let fields = schema["fields"]?.value as? [JSONRecord] {
     for field in fields {
         if let name = field["name"]?.value as? String,
            let type = field["type"]?.value as? String,
@@ -90,35 +88,22 @@ if let fields = collection["schema"]?.value as? [JSONRecord] {
 Get schemas for all collections:
 
 ```swift
-let collections: ListResult<JSONRecord> = try await client.collections.getList(page: 1, perPage: 200)
+let schemas = try await client.collections.getAllSchemas()
 
-if let items = collections.items {
-    for collection in items {
-        if let name = collection["name"]?.value as? String,
-           let type = collection["type"]?.value as? String,
-           let fields = collection["schema"]?.value as? [JSONRecord] {
-            print("Collection: \(name) (\(type))")
-            print("  Fields: \(fields.count)")
-            
-            for field in fields {
-                if let fieldName = field["name"]?.value as? String,
-                   let fieldType = field["type"]?.value as? String {
-                    print("    - \(fieldName): \(fieldType)")
-                }
-            }
+if let collections = schemas["collections"]?.value as? [JSONRecord] {
+    for collection in collections {
+        let name = collection["name"]?.value as? String ?? ""
+        let type = collection["type"]?.value as? String ?? ""
+        let fields = collection["fields"]?.value as? [JSONRecord] ?? []
+
+        print("Collection: \(name) (\(type))")
+        print("  Fields: \(fields.count)")
+
+        for field in fields {
+            let fieldName = field["name"]?.value as? String ?? ""
+            let fieldType = field["type"]?.value as? String ?? ""
+            print("    - \(fieldName): \(fieldType)")
         }
-    }
-}
-```
-
-**Or get all collections at once:**
-```swift
-let allCollections: [JSONRecord] = try await client.collections.getFullList()
-
-for collection in allCollections {
-    if let name = collection["name"]?.value as? String,
-       let fields = collection["schema"]?.value as? [JSONRecord] {
-        print("\(name): \(fields.count) fields")
     }
 }
 ```
@@ -234,19 +219,19 @@ AI systems can use schema information to understand data structure and generate 
 
 ```swift
 func getCollectionInfo(collectionName: String) async throws -> [String: Any] {
-    let collection: JSONRecord = try await client.collections.getOne(collectionName)
+    let schema: JSONRecord = try await client.collections.getSchema(collectionName)
     
     var info: [String: Any] = [:]
     
-    if let name = collection["name"]?.value as? String {
+    if let name = schema["name"]?.value as? String {
         info["name"] = name
     }
     
-    if let type = collection["type"]?.value as? String {
+    if let type = schema["type"]?.value as? String {
         info["type"] = type
     }
     
-    if let fields = collection["schema"]?.value as? [JSONRecord] {
+    if let fields = schema["fields"]?.value as? [JSONRecord] {
         var fieldInfo: [[String: Any]] = []
         
         for field in fields {
@@ -275,7 +260,8 @@ func getCollectionInfo(collectionName: String) async throws -> [String: Any] {
 
 // Use in AI system
 let postsInfo = try await getCollectionInfo(collectionName: "posts")
-print("Posts collection has \(postsInfo["fields"] as? [[String: Any]] ?? []).count) fields")
+let fieldCount = (postsInfo["fields"] as? [[String: Any]])?.count ?? 0
+print("Posts collection has \(fieldCount) fields")
 ```
 
 ### Code Generation
@@ -284,11 +270,11 @@ Generate type-safe models from schema:
 
 ```swift
 func generateSwiftModel(collectionName: String) async throws -> String {
-    let collection: JSONRecord = try await client.collections.getOne(collectionName)
+    let schema: JSONRecord = try await client.collections.getSchema(collectionName)
     
     var model = "struct \(collectionName.capitalized): Codable {\n"
     
-    if let fields = collection["schema"]?.value as? [JSONRecord] {
+    if let fields = schema["fields"]?.value as? [JSONRecord] {
         for field in fields {
             if let name = field["name"]?.value as? String,
                let type = field["type"]?.value as? String {
@@ -323,11 +309,11 @@ Build forms dynamically based on schema:
 
 ```swift
 func buildFormFields(collectionName: String) async throws -> [[String: Any]] {
-    let collection: JSONRecord = try await client.collections.getOne(collectionName)
+    let schema: JSONRecord = try await client.collections.getSchema(collectionName)
     
     var formFields: [[String: Any]] = []
     
-    if let fields = collection["schema"]?.value as? [JSONRecord] {
+    if let fields = schema["fields"]?.value as? [JSONRecord] {
         for field in fields {
             if let name = field["name"]?.value as? String,
                let type = field["type"]?.value as? String,
@@ -359,29 +345,31 @@ Generate API documentation from schemas:
 
 ```swift
 func generateAPIDocs() async throws -> String {
-    let collections: [JSONRecord] = try await client.collections.getFullList()
+    let schemas = try await client.collections.getAllSchemas()
     
     var docs = "# API Documentation\n\n"
     
-    for collection in collections {
-        if let name = collection["name"]?.value as? String,
-           let type = collection["type"]?.value as? String {
-            docs += "## \(name) Collection (\(type))\n\n"
-            
-            if let fields = collection["schema"]?.value as? [JSONRecord] {
-                docs += "### Fields\n\n"
-                docs += "| Name | Type | Required |\n"
-                docs += "|------|------|----------|\n"
+    if let collections = schemas["collections"]?.value as? [JSONRecord] {
+        for collection in collections {
+            if let name = collection["name"]?.value as? String,
+               let type = collection["type"]?.value as? String {
+                docs += "## \(name) Collection (\(type))\n\n"
                 
-                for field in fields {
-                    if let fieldName = field["name"]?.value as? String,
-                       let fieldType = field["type"]?.value as? String,
-                       let required = field["required"]?.value as? Bool {
-                        docs += "| \(fieldName) | \(fieldType) | \(required ? "Yes" : "No") |\n"
+                if let fields = collection["fields"]?.value as? [JSONRecord] {
+                    docs += "### Fields\n\n"
+                    docs += "| Name | Type | Required |\n"
+                    docs += "|------|------|----------|\n"
+                    
+                    for field in fields {
+                        if let fieldName = field["name"]?.value as? String,
+                           let fieldType = field["type"]?.value as? String,
+                           let required = field["required"]?.value as? Bool {
+                            docs += "| \(fieldName) | \(fieldType) | \(required ? "Yes" : "No") |\n"
+                        }
                     }
+                    
+                    docs += "\n"
                 }
-                
-                docs += "\n"
             }
         }
     }
@@ -412,7 +400,7 @@ class SchemaCache {
             return cached
         }
         
-        let schema: JSONRecord = try await client.collections.getOne(collectionName)
+        let schema: JSONRecord = try await client.collections.getSchema(collectionName)
         cache[collectionName] = schema
         return schema
     }
@@ -433,28 +421,24 @@ let schema = try await schemaCache.getSchema(collectionName: "posts")
 
 ### Batch Schema Queries
 
-When querying multiple collections, use batch operations:
+When querying multiple collections, reuse the `getAllSchemas()` payload instead of issuing one request per collection:
 
 ```swift
-func getAllSchemas(collectionNames: [String]) async throws -> [String: JSONRecord] {
-    let batch = client.createBatch()
-    var requests: [String] = []
-    
-    for name in collectionNames {
-        _ = batch.collections.getOne(name)
-        requests.append(name)
-    }
-    
-    let results = try await batch.submit()
-    
-    var schemas: [String: JSONRecord] = [:]
-    for (index, result) in results.enumerated() {
-        if let schema = result as? JSONRecord {
-            schemas[requests[index]] = schema
+func getSchemas(collectionNames: [String]) async throws -> [String: JSONRecord] {
+    let response = try await client.collections.getAllSchemas()
+    let targets = Set(collectionNames.map { $0.lowercased() })
+
+    var result: [String: JSONRecord] = [:]
+    if let collections = response["collections"]?.value as? [JSONRecord] {
+        for collection in collections {
+            if let name = collection["name"]?.value as? String,
+               targets.contains(name.lowercased()) {
+                result[name] = collection
+            }
         }
     }
-    
-    return schemas
+
+    return result
 }
 ```
 
@@ -464,8 +448,8 @@ Only query the fields you need:
 
 ```swift
 // Get only field names and types
-let collection: JSONRecord = try await client.collections.getOne("posts")
-if let fields = collection["schema"]?.value as? [JSONRecord] {
+let schema: JSONRecord = try await client.collections.getSchema("posts")
+if let fields = schema["fields"]?.value as? [JSONRecord] {
     let fieldInfo = fields.compactMap { field -> (String, String)? in
         guard let name = field["name"]?.value as? String,
               let type = field["type"]?.value as? String else {
@@ -493,21 +477,21 @@ class SchemaAnalyzer {
     }
     
     func analyzeCollection(_ collectionName: String) async throws -> [String: Any] {
-        let collection: JSONRecord = try await client.collections.getOne(collectionName)
+        let schema: JSONRecord = try await client.collections.getSchema(collectionName)
         
         var analysis: [String: Any] = [:]
         
         // Basic info
-        if let name = collection["name"]?.value as? String {
+        if let name = schema["name"]?.value as? String {
             analysis["name"] = name
         }
         
-        if let type = collection["type"]?.value as? String {
+        if let type = schema["type"]?.value as? String {
             analysis["type"] = type
         }
         
         // Field analysis
-        if let fields = collection["schema"]?.value as? [JSONRecord] {
+        if let fields = schema["fields"]?.value as? [JSONRecord] {
             var fieldStats: [String: Int] = [:]
             var requiredCount = 0
             var relationCount = 0
@@ -568,7 +552,7 @@ Always handle errors when querying schemas:
 
 ```swift
 do {
-    let schema: JSONRecord = try await client.collections.getOne("posts")
+    let schema: JSONRecord = try await client.collections.getSchema("posts")
     // Process schema
 } catch let error as ClientResponseError {
     if error.status == 404 {
@@ -588,4 +572,3 @@ do {
 For more information, see:
 - [Collections API](./COLLECTION_API.md) - Full collection management
 - [AI Development Guide](./AI_DEVELOPMENT_GUIDE.md) - Using schemas in AI systems
-

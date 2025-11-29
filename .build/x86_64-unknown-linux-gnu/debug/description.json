@@ -60,6 +60,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/SQLModels.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/VectorModels.swift"
         },
         {
@@ -124,6 +128,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SQLService.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift"
         },
         {
@@ -175,6 +183,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LangChaingoModels.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ListResult.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse.swift.o",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BackupService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/BaseService.swift.o",
@@ -191,6 +200,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PubSubService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RealtimeService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.swift.o",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorService.swift.o",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/AnyCodable.swift.o",
@@ -270,6 +280,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels.swift.o"
         },
         {
@@ -334,6 +348,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.swift.o"
         },
         {
@@ -379,6 +397,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/LangChaingoModels.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/ListResult.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/RecordAuthResponse.swift",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/SQLModels.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/VectorModels.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BackupService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BaseService.swift",
@@ -395,6 +414,7 @@
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift",
+        "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SQLService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/VectorService.swift",
         "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/AnyCodable.swift",
@@ -680,6 +700,7 @@
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/LangChaingoModels.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/ListResult.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/RecordAuthResponse.swift",
+      "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/SQLModels.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/VectorModels.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BackupService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BaseService.swift",
@@ -696,6 +717,7 @@
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift",
+      "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SQLService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/VectorService.swift",
       "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/AnyCodable.swift",
@@ -977,6 +999,10 @@
         },
         {
           "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/SQLModels.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/VectorModels.swift"
         },
         {
@@ -1038,6 +1064,10 @@
         {
           "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SQLService.swift"
         },
         {
           "kind" : "file",
@@ -1232,6 +1262,14 @@
         {
           "kind" : "file",
           "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RequestOptions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService.swift.o"
         },
         {
           "kind" : "file",

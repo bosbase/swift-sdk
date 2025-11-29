@@ -23,6 +23,10 @@ The Collection API provides endpoints for managing collections (Base, Auth, and 
 - `DELETE /api/collections/{collection}/truncate` - Truncate collection
 - `PUT /api/collections/import` - Import collections
 - `GET /api/collections/meta/scaffolds` - Get scaffolds
+- `GET /api/collections/{collection}/schema` - Get schema summary for a single collection
+- `GET /api/collections/schemas` - Get schema summaries for all collections
+- `POST /api/collections/sql/tables` - Register existing SQL tables as collections
+- `POST /api/collections/sql/import` - Execute SQL definitions and register the resulting tables
 
 **Note**: All Collection API operations require superuser authentication.
 
@@ -312,6 +316,67 @@ try await client.collections.truncate("posts")
 ```
 
 **Warning**: This operation is destructive and cannot be undone.
+
+## Schema Query Endpoints
+
+Retrieve lightweight schema information without fetching the full collection definition:
+
+```swift
+// Single collection schema (field name, type, required, system, hidden)
+let schema = try await client.collections.getSchema("posts")
+if let fields = schema["fields"]?.value as? [JSONRecord] {
+    for field in fields {
+        print("\(field["name"]?.value as? String ?? ""): \(field["type"]?.value as? String ?? "")")
+    }
+}
+
+// All collection schemas
+let allSchemas = try await client.collections.getAllSchemas()
+if let collections = allSchemas["collections"]?.value as? [JSONRecord] {
+    print("Fetched \(collections.count) schemas")
+}
+```
+
+These endpoints are useful for AI agents, code generators, and dynamic form builders that only need structural details.
+
+## Register Existing SQL Tables
+
+Superusers can expose existing database tables as BosBase collections while keeping the original SQL schema:
+
+```swift
+let registered = try await client.collections.registerSQLTables([
+    "sql_table_one",
+    "sql_table_two"
+])
+
+print("Registered collections: \(registered.count)")
+```
+
+The backend will add audit columns (created/updated/by) when needed and return the created or updated collection definitions.
+
+## Import SQL Table Definitions
+
+Execute SQL statements and register the resulting tables as collections in a single call:
+
+```swift
+let result = try await client.collections.importSQLTables([
+    SQLTableDefinition(
+        name: "legacy_orders",
+        sql: """
+        CREATE TABLE IF NOT EXISTS legacy_orders (
+            id TEXT PRIMARY KEY,
+            customer_email TEXT NOT NULL,
+            total REAL NOT NULL
+        );
+        """
+    )
+])
+
+print("Created: \(result.created.count)")
+print("Skipped (already existed): \(result.skipped)")
+```
+
+Use this when migrating legacy schemas—each definition can include an optional `sql` statement that runs before registration.
 
 ## Import Collections
 

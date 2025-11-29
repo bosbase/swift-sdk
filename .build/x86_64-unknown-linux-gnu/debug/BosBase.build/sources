@@ -6,6 +6,7 @@
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/LangChaingoModels.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/ListResult.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/RecordAuthResponse.swift
+/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/SQLModels.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/VectorModels.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BackupService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/BaseService.swift
@@ -22,6 +23,7 @@
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RealtimeService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RecordService.swift
+/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SQLService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/VectorService.swift
 /home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Support/AnyCodable.swift

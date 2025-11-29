@@ -186,6 +186,54 @@ public final class CollectionService: BaseService {
         return try await createFromScaffold(type: "view", name: name, overrides: finalOverrides, query: query, headers: headers)
     }
 
+    public func registerSQLTables(
+        _ tables: [String],
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> [JSONRecord] {
+        let cleaned = normalizeTables(tables)
+        guard !cleaned.isEmpty else {
+            throw validationError("At least one table name must be provided")
+        }
+
+        let options = RequestOptions(
+            method: .post,
+            headers: headers,
+            query: query,
+            body: .encodable(SQLTableNamesRequest(tables: cleaned))
+        )
+
+        return try await client.send(
+            basePath + "/sql/tables",
+            options: options,
+            decodeTo: [JSONRecord].self
+        )
+    }
+
+    public func importSQLTables(
+        _ tables: [SQLTableDefinition],
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> SQLTableImportResult {
+        let cleaned = normalizeTableDefinitions(tables)
+        guard !cleaned.isEmpty else {
+            throw validationError("At least one table definition must be provided")
+        }
+
+        let options = RequestOptions(
+            method: .post,
+            headers: headers,
+            query: query,
+            body: .encodable(SQLTableImportRequest(tables: cleaned))
+        )
+
+        return try await client.send(
+            basePath + "/sql/import",
+            options: options,
+            decodeTo: SQLTableImportResult.self
+        )
+    }
+
     public func importCollections(
         _ collections: [JSONRecord],
         headers: [String: String] = [:]
@@ -321,6 +369,44 @@ public final class CollectionService: BaseService {
     ) async throws -> [String] {
         let collection: JSONRecord = try await getOne(collectionIdOrName, query: query, headers: headers)
         return extractStringArray(from: collection["indexes"])
+    }
+
+    private func normalizeTables(_ tables: [String]) -> [String] {
+        var seen = Set<String>()
+        var result: [String] = []
+
+        for table in tables {
+            let name = table.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !name.isEmpty else { continue }
+
+            let key = name.lowercased()
+            if seen.contains(key) {
+                continue
+            }
+            seen.insert(key)
+            result.append(name)
+        }
+
+        return result
+    }
+
+    private func normalizeTableDefinitions(_ tables: [SQLTableDefinition]) -> [SQLTableDefinition] {
+        var seen = Set<String>()
+        var cleaned: [SQLTableDefinition] = []
+
+        for table in tables {
+            let name = table.name.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !name.isEmpty else { continue }
+
+            let key = name.lowercased()
+            if seen.contains(key) {
+                continue
+            }
+            seen.insert(key)
+            cleaned.append(SQLTableDefinition(name: name, sql: table.sql))
+        }
+
+        return cleaned
     }
 
     private func validationError(_ message: String) -> ClientResponseError {
