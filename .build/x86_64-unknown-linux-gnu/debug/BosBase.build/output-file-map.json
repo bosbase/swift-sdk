@@ -58,12 +58,26 @@
     "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse.swiftdeps",
     "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordAuthResponse.dia"
   },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/RedisModels.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisModels.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisModels.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisModels~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisModels.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisModels.dia"
+  },
   "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/SQLModels.swift": {
     "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels.d",
     "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels.swift.o",
     "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels~partial.swiftmodule",
     "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels.swiftdeps",
     "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLModels.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/ScriptModels.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptModels.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptModels.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptModels~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptModels.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptModels.dia"
   },
   "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Models/VectorModels.swift": {
     "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/VectorModels.d",
@@ -156,6 +170,13 @@
     "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService.swiftdeps",
     "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/LogService.dia"
   },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PluginService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PluginService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PluginService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PluginService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PluginService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PluginService.dia"
+  },
   "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/PubSubService.swift": {
     "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PubSubService.d",
     "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/PubSubService.swift.o",
@@ -177,12 +198,33 @@
     "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.swiftdeps",
     "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RecordService.dia"
   },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/RedisService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/RedisService.dia"
+  },
   "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SQLService.swift": {
     "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService.d",
     "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService.swift.o",
     "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService~partial.swiftmodule",
     "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService.swiftdeps",
     "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SQLService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/ScriptPermissionsService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptPermissionsService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptPermissionsService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptPermissionsService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptPermissionsService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptPermissionsService.dia"
+  },
+  "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/ScriptService.swift": {
+    "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptService.d",
+    "object": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptService.swift.o",
+    "swiftmodule": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptService~partial.swiftmodule",
+    "swift-dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptService.swiftdeps",
+    "diagnostics": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/ScriptService.dia"
   },
   "/home/darkmoon/Documents/rbosbase/swift-sdk/Sources/BosBase/Services/SettingsService.swift": {
     "dependencies": "/home/darkmoon/Documents/rbosbase/swift-sdk/.build/x86_64-unknown-linux-gnu/debug/BosBase.build/SettingsService.d",

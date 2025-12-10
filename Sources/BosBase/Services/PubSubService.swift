@@ -33,7 +33,7 @@ private struct PubSubEnvelope: Codable {
     let data: AnyCodable?
 }
 
-public final class PubSubService: BaseService {
+public final class PubSubService: BaseService, @unchecked Sendable {
     public typealias Listener = @Sendable (PubSubMessage) -> Void
 
     public var isConnected: Bool {
@@ -390,20 +390,20 @@ public final class PubSubService: BaseService {
     ) async throws -> T {
         try await withCheckedThrowingContinuation { continuation in
             queue.async {
-                let timeout = Task { [weak self] in
-                    let nanos = UInt64((self?.ackTimeoutSeconds ?? 0) * 1_000_000_000)
-                    try? await Task.sleep(nanoseconds: nanos)
-                    self?.queue.async {
-                        guard let waiter = self?.pendingAcks.removeValue(forKey: requestId) else { return }
-                        waiter.reject(
-                            ClientResponseError(
-                                url: nil,
-                                status: 0,
-                                response: ["message": AnyCodable("Timed out waiting for pubsub response.")]
-                            )
+                let timeoutWork = DispatchWorkItem { [weak self] in
+                    guard let self else { return }
+                    guard let waiter = self.pendingAcks.removeValue(forKey: requestId) else { return }
+                    waiter.reject(
+                        ClientResponseError(
+                            url: nil,
+                            status: 0,
+                            response: ["message": AnyCodable("Timed out waiting for pubsub response.")]
                         )
-                    }
+                    )
                 }
+                let delayMilliseconds = Int(self.ackTimeoutSeconds * 1000)
+                let deadline = DispatchTime.now() + .milliseconds(delayMilliseconds)
+                self.queue.asyncAfter(deadline: deadline, execute: timeoutWork)
 
                 self.pendingAcks[requestId] = PubSubAckWaiter(
                     fulfill: { payload in
@@ -418,7 +418,7 @@ public final class PubSubService: BaseService {
                         continuation.resume(throwing: error)
                     },
                     cancel: {
-                        timeout.cancel()
+                        timeoutWork.cancel()
                     }
                 )
             }
@@ -479,7 +479,7 @@ public final class PubSubService: BaseService {
     }
 
     private func buildWebSocketURL() throws -> URL {
-        guard var url = client.buildURL("/api/pubsub") else {
+        guard let url = client.buildURL("/api/pubsub") else {
             throw ClientResponseError(url: nil, status: 0, response: ["message": AnyCodable("Invalid pubsub URL")])
         }
 

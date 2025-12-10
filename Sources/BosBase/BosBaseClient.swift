@@ -29,6 +29,10 @@ public final class BosBaseClient: @unchecked Sendable {
     public lazy var graphql = GraphQLService(client: self)
     public lazy var sql = SQLService(client: self)
     public lazy var pubsub = PubSubService(client: self)
+    public lazy var plugins = PluginService(client: self)
+    public lazy var scripts = ScriptService(client: self)
+    public lazy var scriptPermissions = ScriptPermissionsService(client: self)
+    public lazy var redis = RedisService(client: self)
 
     let session: URLSession
     private let jsonDecoder: JSONDecoder

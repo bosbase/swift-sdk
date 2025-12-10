@@ -392,6 +392,64 @@ public final class RecordService: BaseService {
         )
     }
 
+    @discardableResult
+    public func bindCustomToken(
+        email: String,
+        password: String,
+        token: String,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> Bool {
+        let payload: JSONRecord = [
+            "email": AnyCodable(email),
+            "password": AnyCodable(password),
+            "token": AnyCodable(token)
+        ]
+        let options = RequestOptions(method: .post, headers: headers, query: query, body: .encodable(payload))
+        _ = try await client.send(baseCollectionPath + "/bind-token", options: options, decodeTo: EmptyResponse.self)
+        return true
+    }
+
+    @discardableResult
+    public func unbindCustomToken(
+        email: String,
+        password: String,
+        token: String,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:]
+    ) async throws -> Bool {
+        let payload: JSONRecord = [
+            "email": AnyCodable(email),
+            "password": AnyCodable(password),
+            "token": AnyCodable(token)
+        ]
+        let options = RequestOptions(method: .post, headers: headers, query: query, body: .encodable(payload))
+        _ = try await client.send(baseCollectionPath + "/unbind-token", options: options, decodeTo: EmptyResponse.self)
+        return true
+    }
+
+    public func authWithToken<RecordType: Decodable>(
+        token: String,
+        expand: String? = nil,
+        fields: String? = nil,
+        query: [String: Any?] = [:],
+        headers: [String: String] = [:],
+        requestKey: String? = nil,
+        autoCancel: Bool? = nil
+    ) async throws -> RecordAuthResponse<RecordType> {
+        let payload: JSONRecord = ["token": AnyCodable(token)]
+        return try await sendAuthRequest(
+            path: baseCollectionPath + "/auth-with-token",
+            body: payload,
+            expand: expand,
+            fields: fields,
+            query: query,
+            headers: headers,
+            requestKey: requestKey,
+            autoCancel: autoCancel
+        )
+    }
+
     public func authWithOAuth2Code<RecordType: Decodable>(
         provider: String,
         code: String,
